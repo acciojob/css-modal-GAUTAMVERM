@@ -1,5 +1,4 @@
-//your JS code here. If required.
- document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
             const modal = document.getElementById("modal");
             const openModalBtn = document.getElementById("openModal");
             const closeModalBtn = document.querySelector(".close-modal");
@@ -9,16 +8,16 @@
             }
 
             openModalBtn?.addEventListener("click", () => {
-                modal.style.display = "flex";
+                modal.classList.add("show");
             });
             
             closeModalBtn?.addEventListener("click", () => {
-                modal.style.display = "none";
+                modal.classList.remove("show");
             });
             
             window.addEventListener("click", (e) => {
                 if (e.target === modal) {
-                    modal.style.display = "none";
+                    modal.classList.remove("show");
                 }
             });
         });
